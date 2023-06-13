@@ -75,7 +75,7 @@ exports.getQuotes = asyncHandler(async (req, res, next) => {
 });
 
 // @desc        Get single quote
-// @route       GET /api/v1/animechan/:id
+// @route       GET /api/v1/quotes/:id
 // @access      Public
 exports.getQuote = asyncHandler(async (req, res, next) => {
   const quote = await Quote.findById(req.params.id, {
@@ -91,7 +91,7 @@ exports.getQuote = asyncHandler(async (req, res, next) => {
 });
 
 // @desc        Create new quote
-// @route       POST /api/v1/animechan
+// @route       POST /api/v1/quotes
 // @access      Private
 exports.createQuote = asyncHandler(async (req, res, next) => {
   // Add user to req.body
@@ -102,7 +102,7 @@ exports.createQuote = asyncHandler(async (req, res, next) => {
 });
 
 // @desc        Update quote
-// @route       PUT /api/v1/animechan/:id
+// @route       PUT /api/v1/quotes/:id
 // @access      Private
 exports.updateQuote = asyncHandler(async (req, res, next) => {
   let quote = await Quote.findById(req.params.id);
@@ -131,7 +131,7 @@ exports.updateQuote = asyncHandler(async (req, res, next) => {
 });
 
 // @desc        Delete quote
-// @route       DELETE /api/v1/animechan/:id
+// @route       DELETE /api/v1/quotes/:id
 // @access      Private
 exports.deleteQuote = asyncHandler(async (req, res, next) => {
   const quote = await Quote.findById(req.params.id);
@@ -156,7 +156,7 @@ exports.deleteQuote = asyncHandler(async (req, res, next) => {
 });
 
 // @desc        Get single random quote
-// @route       GET /api/v1/animechan/random/:true
+// @route       GET /api/v1/quotes/random/:true
 // @access      Public
 exports.randomQuote = asyncHandler(async (req, res, next) => {
   if (!req.params.id) {

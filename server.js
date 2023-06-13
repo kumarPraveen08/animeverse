@@ -56,7 +56,7 @@ app.use(hpp());
 app.use(cors());
 
 // Mount routers
-app.use("/api/v1/animechan", quotes);
+app.use("/api/v1/quotes", quotes);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/users", users);
 app.use(errorHandler);
