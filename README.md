@@ -1,2 +1,4 @@
 # animeverse
-Api for anime quotes with authentication
+
+Api for anime quotes with authentication  
+some changes
