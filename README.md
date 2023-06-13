@@ -1,4 +1,4 @@
-# animeverse
+# AnimeVerse
 
 > Backend API for anime quotes
 
@@ -35,5 +35,5 @@ npm start
 {URL}/api/v1/quotes?page=2&limit=10
 ```
 
--Version: 1.0.0
+-Version: 1.0.0  
 -License: MIT
