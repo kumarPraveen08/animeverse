@@ -14,7 +14,7 @@ npm install
 
 ## Run App
 
-```javascript
+```
 // run in dev mode
 npm run dev
 
@@ -24,7 +24,7 @@ npm start
 
 ## API Quote Endpoints
 
-```javascript
+```
 // Get quotes
 // Access - Public
 // Route - Get
@@ -63,7 +63,7 @@ npm start
 
 ## API User Endpoints
 
-```javascript
+```
 // Get users
 // Access - Public
 // Route - Get
@@ -97,7 +97,7 @@ npm start
 
 ## API Auth Endpoints
 
-```javascript
+```
 // Register new user
 // Access - Public
 // Route - POST
