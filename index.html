@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        background-color: white;
+        border-bottom: 5px solid rgba(43, 101, 236, 1);
+      }
+
+      .container {
+        width: 1200px;
+        margin: auto;
+      }
+
+      header {
+        background-color: white;
+      }
+
+      header .row {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0px;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+      }
+
+      ul li a {
+        text-decoration: none;
+        padding: 20px 10px;
+        color: #2d0000;
+      }
+
+      a {
+        text-decoration: none;
+        padding: 20px 10px;
+        color: #2d0000;
+      }
+
+      a:hover {
+        color: rgba(43, 101, 236, 1);
+      }
+
+      .slider {
+        background-color: rgb(250, 249, 249);
+        height: 450px;
+      }
+      .slider {
+        text-align: center !important;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .slider h1 {
+        font-size: 6rem;
+      }
+
+      .slider p {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      #details .items {
+        padding: 100px 0 !important;
+      }
+
+      footer {
+        padding: 30px 0;
+        text-align: center;
+        background-color: white;
+        border-bottom: 5px solid rgba(43, 101, 236, 1);
+      }
+      .item {
+        margin: 20px 0;
+      }
+      .item p {
+        margin: 20px 0 !important;
+        font-weight: 700;
+      }
+      h2 {
+        text-align: center;
+        margin: 50px 0;
+      }
+      code {
+        background-color: #2d2d2d;
+        color: #fff;
+        padding: 8px;
+        margin: 20px 0;
+      }
+      .logo {
+        font-family: 2rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col logo"><a href="#">MangaQuote</a></div>
+            <div class="col">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#details">Docs</a></li>
+                <li>
+                  <a
+                    href="https://github.com/kumarPraveen08/animeverse/issues"
+                    target="_blank"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="slider">
+        <div class="container">
+          <h1>QuoteMange API</h1>
+          <p>Api for anime and mange quotes</p>
+        </div>
+      </div>
+    </section>
+    <section id="details">
+      <div class="container">
+        <h2>QuoteMange API Usages</h2>
+        <div class="items">
+          <div class="item">
+            <p>Get Quotes</p>
+            <code>http://quotemanga.vercel.com/api/v1/quotes</code>
+          </div>
+          <div class="item">
+            <p>Get Random Quote</p>
+            <code>http://quotemanga.vercel.com/api/v1/quotes/random</code>
+          </div>
+          <div class="item">
+            <p>Get Quotes With Limit</p>
+            <code
+              >http://quotemanga.vercel.com/api/v1/quotes?limit=10&page=1</code
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">Created with love by Praveen Prajapati © 2023</div>
+    </footer>
+  </body>
+</html>

@@ -14,6 +14,7 @@ const quotes = require("./routes/quotes");
 const auth = require("./routes/auth");
 const users = require("./routes/users");
 const connectDB = require("./config/db");
+const path = require("path");
 
 dotenv.config({ path: "./config/config.env" });
 
@@ -60,6 +61,11 @@ app.use("/api/v1/quotes", quotes);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/users", users);
 app.use(errorHandler);
+
+// sendFile will go here
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/index.html"));
+});
 
 const PORT = process.env.PORT || 8000;
 const server = app.listen(
