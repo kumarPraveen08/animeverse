@@ -22,7 +22,7 @@ exports.getQuotes = asyncHandler(async (req, res, next) => {
 
   // Finding resource
   query = Quote.find(JSON.parse(queryStr), {
-    // _id: 0,
+    _id: 0,
     createdAt: 0,
     updatedAt: 0,
     __v: 0,
