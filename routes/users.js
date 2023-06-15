@@ -1,18 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const {
-  getUser,
-  getUsers,
-  createUser,
-  updateUser,
-  deleteUser,
-} = require("../controllers/users");
+  getQuote,
+  getQuotes,
+  createQuote,
+  updateQuote,
+  deleteQuote,
+  randomQuote,
+} = require("../controllers/quotes");
 const { protect, authorize } = require("../middleware/auth");
 
-router.use(protect);
-router.use(authorize("admin"));
-
-router.route("/").get(getUsers).post(createUser);
-router.route("/:id").get(getUser).put(updateUser).delete(deleteUser);
+router
+  .route("/")
+  .get(getQuotes)
+  .post(protect, authorize("publisher", "admin"), createQuote);
+router
+  .route("/:id")
+  .get(getQuote)
+  .put(protect, authorize("publisher", "admin"), updateQuote)
+  .delete(protect, authorize("publisher", "admin"), deleteQuote);
+router.route("/random/:id").get(randomQuote);
 
 module.exports = router;

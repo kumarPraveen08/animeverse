@@ -19,6 +19,6 @@ router
   .get(getQuote)
   .put(protect, authorize("publisher", "admin"), updateQuote)
   .delete(protect, authorize("publisher", "admin"), deleteQuote);
-router.route("/random/:id").get(randomQuote);
 
+router.route("/:random/:id").get(randomQuote);
 module.exports = router;
