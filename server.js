@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
 const xss = require("xss-clean");
-const rateLimit = require("express-rate-limit");
+// const rateLimit = require("express-rate-limit");
 const hpp = require("hpp");
 const cors = require("cors");
 const errorHandler = require("./middleware/error");
@@ -42,12 +42,12 @@ app.use(helmet());
 app.use(xss());
 
 // Rate limiting
-const limiter = rateLimit({
-  windowMs: 10 * 60 * 1000,
-  max: 100,
-});
+// const limiter = rateLimit({
+//   windowMs: 10 * 60 * 1000,
+//   max: 100,
+// });
 
-app.use(limiter);
+// app.use(limiter);
 
 // Prevent http param pollution
 app.use(hpp());
@@ -62,7 +62,15 @@ app.use("/api/v1/users", users);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-const server = app.listen(
+// const server = app.listen(
+//   PORT,
+//   console.log(
+//     `Server is running in ${process.env.NODE_ENV} mode on PORT ${PORT}`.yellow
+//       .bold
+//   )
+// );
+
+app.listen(
   PORT,
   console.log(
     `Server is running in ${process.env.NODE_ENV} mode on PORT ${PORT}`.yellow
@@ -71,8 +79,8 @@ const server = app.listen(
 );
 
 // handle unhandled promise rejections
-process.on("unhandledRejection", (err, promise) => {
-  console.log(`Error: ${err.message}`.red);
-  // close server and exist process
-  server.close(() => process.exit(1));
-});
+// process.on("unhandledRejection", (err, promise) => {
+//   console.log(`Error: ${err.message}`.red);
+//   // close server and exist process
+//   server.close(() => process.exit(1));
+// });
